@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Get Email(s) for Github Handle</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 2em;
+    color: #444;
+    background-color: #f8f8f8;
+}
+input { border: solid 1px #888 };
+input[type=text] {
+    background-color: #e8e8e8;
+}
+input[type=button] {
+    border-radius: 4px;
+    background-color: #ccc;
+}
+@media (prefers-color-scheme: dark) {
+    body, input {
+        color: #999;
+    }
+    body {
+        background-color: #1e1e1e;
+    }
+    input[type=text] {
+        background-color: #333;
+        color: #999;
+    }
+    input[type=button] {
+        background-color: #444;
+    }
+}
+h1 {
+    font-size: 1.3em;
+}
+input, #answer { font-size: 1.2em; font-family: 'IBM Plex Mono', monospace }
+    </style>
+    <script src="logic.js"></script>
+</head>
+<body>
+<h1>Get email(s) for which Github handle?</h1>
+<p>
+    <input type="text" id="handle" autofocus onkeyup="acceptEnter()">
+    <input type="button" value="Get" onclick="getEmails()">
+</p>
+<h1 id="answer-head" style="display:none; padding-top: 1em">Emails for that handle include:</h1>
+<p id="answer"></p>
+</body>
+</html>
